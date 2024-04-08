@@ -1,30 +1,26 @@
-<?PHP 
+<?php 
 
-require_once 'ticket.php';
-//Déclarations des variables pour la connexion
-$host ="localhost";
-$user="root";
-$pass= "";
-$db = "plane_ticket";
+    $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $dbname = "Ticket";
 
-try{
+
+   
+try {
+  
+    // $connexion = new PDO($serveurname, $utilisateur, $mot_de_passe);
+    // echo 'ok';
+     $connection = new PDO("mysql:host=$servername;dbname=$dbname;",$username, $password);
+
+    // Configuration pour afficher les erreurs PDO
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "connexion OK";
     
-    $connexion = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
-
-    //Déclaration des variables et instanciation de resultat
-    $first_name ="";
-    $last_name ="";
-    $matricule ="";
-    $sexe ="";
-    $tranche_age ="";
-    $situation_matrimoniale ="";
-    $statut ="";
-    $etat="";
-
-    $member = new Member ($connexion, $first_name, $last_name,$matricule,$tranche_age,$situation_matrimoniale,$sexe,$statut,$etat);
-    $resultat = $member->readMember();
-
-    
-} catch (PDOException $e) {
-    die("Erreur de la connexion à la base de données : ".$e->getMessage());
+} catch(PDOException $e) {
+    echo "Erreur de connexion à la base de données : " . $e->getMessage();
 }
+
+
+//$connexion = null; 
+?>
