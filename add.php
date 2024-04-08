@@ -1,5 +1,7 @@
 <?php
 include_once 'server.php';
+require_once ('CRUD.php');
+
 if($_SERVER['REQUEST_METHOD'] === "POST" ){
 
     $first_name = $_POST['first_name'];
@@ -15,6 +17,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST" ){
     $pays = $_POST['departure_point'];
     $creation_date = date("Y-m-d H:i:s");
     $user_id = $_SESSION['id_user'];
+
 }
 
 ?>
