@@ -1,6 +1,7 @@
-<?php
+<!-- <?php
 include_once 'server.php';
 require_once ('CRUD.php');
+require_once ('header.php');
 
 if($_SERVER['REQUEST_METHOD'] === "POST" ){
 
@@ -215,4 +216,4 @@ if($_SERVER['REQUEST_METHOD'] === "POST" ){
     </div>
 </body>
 
-</html>
+</html> -->

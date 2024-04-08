@@ -1,6 +1,4 @@
-<?php
-require('server.php');
-?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +8,10 @@ require('server.php');
 <header class="header">
     <nav class="nav-bar">
 
-
         <ul class="nav-bar-btn">
-
             <li class="btn"><a href="index.php">Accueil</a></li> 
             <li class="btn"><a href="add.php">Acheter un billet</a></li>   
-            <li class="btn"><a href="profil.php">Mon profil</a></li>  
+            <li class="btn"><a href="read.php">Mon profil</a></li>  
             <li class="btn"><a href="my_tickets.php">Mes billets</a></li> 
         </ul>
     </nav>

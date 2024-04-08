@@ -1,6 +1,6 @@
 <?php
 require_once ('ticket.php');
-require_once ('add.php');
+
 
 $servername = "localhost";
 $username = "root";

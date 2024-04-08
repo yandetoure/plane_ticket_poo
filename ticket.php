@@ -1,6 +1,6 @@
 <?php
 require_once('CRUD.php');
-require_once ('add.php');
+require_once ('header.php');
 
 class Ticket implements CRUD {
     private $connexion;
